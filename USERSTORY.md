@@ -1,4 +1,6 @@
-# User Story - QMS - Quote Quiz (Primary Function)
+# QMS - Quote Quiz (Primary Function)
+
+## User Story 
 
 As a fan of anime
 
@@ -16,7 +18,9 @@ Track the correct answer streaks to utilize local storage.
 
 
 
-# User Story - QMS - Quote Generator (Secondary Function)
+# QMS - Quote Generator (Secondary Function)
+
+## User Story
 
 As a fan of anime
 
