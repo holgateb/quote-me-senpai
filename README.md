@@ -14,6 +14,10 @@ fetch('https://animechan.vercel.app/api/quotes/character?name=saitama')
 # API - get anime images and gifs
 https://nekos.best/api/v2/thumbsup?amount=20https://nekos.best/api/v2/thumbsup?amount=20
 
+
+# Image Source
+https://knowyourmeme.com/photos/1495828-ranimemes
+
 ## Possible Success Endpoints
 
 highfive
