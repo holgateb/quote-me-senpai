@@ -19,31 +19,41 @@ https://nekos.best/api/v2/thumbsup?amount=20https://nekos.best/api/v2/thumbsup?a
 https://knowyourmeme.com/photos/1495828-ranimemes
 
 ## Possible Success Endpoints
-
+ 
+```
 highfive
 happy
 thumbsup
 smile
 dance
-
-<!-- ## Possible Failure Endpoints
-
-laugh ?
-bite
-poke
+```
+ 
+## Possible Failure Endpoints (mocking)
+ 
+```
+laugh
 stare
 baka
-think
+bored
+```
+ 
+## Possible Failure Endpoints (disappointed)
+ 
+```
 pout
 facepalm
-shoot
 cry
-pat
+shrug ?
+```
+ 
+## Possible Failure Endpoints (violent)
+ 
+```
 punch
-shrug
-bored
 kick
-slap -->
+slap
+```
+
 
 
 
