@@ -1,0 +1,26 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+H2 {
+    font-weight: bolder;
+    font-size: larger;
+    
+}
+
+main {
+    flex: 1 0 auto;
+  }
+
+.buttons {
+    display: grid;
+    gap: 10px;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+   
+}
