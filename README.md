@@ -16,31 +16,39 @@ https://nekos.best/api/v2/thumbsup?amount=20https://nekos.best/api/v2/thumbsup?a
 
 ## Possible Success Endpoints
 
+```
 highfive
 happy
 thumbsup
 smile
 dance
+```
 
-<!-- ## Possible Failure Endpoints
+## Possible Failure Endpoints (mocking)
 
-laugh ?
-bite
-poke
+```
+laugh
 stare
 baka
-think
+bored
+```
+
+## Possible Failure Endpoints (disappointed)
+
+```
 pout
 facepalm
-shoot
 cry
-pat
-punch
-shrug
-bored
-kick
-slap -->
+shrug ?
+```
 
+## Possible Failure Endpoints (violent)
+
+```
+punch
+kick
+slap
+```
 
 
 
