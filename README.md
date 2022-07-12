@@ -18,6 +18,7 @@ https://nekos.best/api/v2/thumbsup?amount=20https://nekos.best/api/v2/thumbsup?a
 # Image Source
 https://knowyourmeme.com/photos/1495828-ranimemes
 
+# Success
 ## Possible Success Endpoints
  
 ```
@@ -26,8 +27,9 @@ happy
 thumbsup
 smile
 dance
+
 ```
- 
+# Failure 
 ## Possible Failure Endpoints (mocking)
  
 ```
@@ -35,6 +37,23 @@ laugh
 stare
 baka
 bored
+
+```
+## Possible Failure Text (mocking)
+
+```
+Wrong.
+Nope.
+What were you thinking?
+Wow! THAT got you? 
+Guess you skipped cram school.
+You couldn't get that one right?
+Ha! I knew you couldn't afford Crunchyroll. 
+I bet you don't even have a Crunchyroll account. 
+Wow! I bet you watch anime on YouTube.
+I bet you think Avatar: The Last Airbender is anime!
+Ha! But that was an easy one!
+
 ```
  
 ## Possible Failure Endpoints (disappointed)
@@ -44,6 +63,21 @@ pout
 facepalm
 cry
 shrug ?
+
+```
+## Possible Failure Text (disappointed)
+
+```
+I'm not mad; I'm just disappointed.
+I guess I expected too much.
+What a pity.
+What were you thinking? 
+I guess you'll have to try again.
+I thought you liked anime!
+Don't give up...
+It's okay, you'll get it next time...
+But I bet on your success! Now my allowance is gone.
+
 ```
  
 ## Possible Failure Endpoints (violent)
@@ -52,6 +86,19 @@ shrug ?
 punch
 kick
 slap
+
+```
+## Possible Failure Text (violent)
+
+```
+Not even close!
+Not this time!
+NOPE!
+Pathetic!
+Not today!
+No streak for you!
+I knew you were all talk!
+
 ```
 
 
