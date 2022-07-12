@@ -14,6 +14,32 @@ fetch('https://animechan.vercel.app/api/quotes/character?name=saitama')
 # API - get anime images and gifs
 https://nekos.best/api/v2/thumbsup?amount=20https://nekos.best/api/v2/thumbsup?amount=20
 
+## Possible Success Endpoints
+
+highfive
+happy
+thumbsup
+smile
+dance
+
+<!-- ## Possible Failure Endpoints
+
+laugh ?
+bite
+poke
+stare
+baka
+think
+pout
+facepalm
+shoot
+cry
+pat
+punch
+shrug
+bored
+kick
+slap -->
 
 
 
