@@ -4,6 +4,10 @@ body {
     flex-direction: column;
 }
 
+.brand-logo {
+    color: black;
+}
+
 H2 {
     font-weight: bolder;
     font-size: larger;
@@ -13,6 +17,11 @@ H2 {
 main {
     flex: 1 0 auto;
   }
+
+.gif {
+    justify-content: center;
+    background-image: "";
+}
 
 .buttons {
     display: grid;
