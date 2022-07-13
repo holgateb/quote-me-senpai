@@ -13,110 +13,45 @@ var test = [
     {"anime":"Gakuen Alice","character":"Mikan Sakura","quote":"To me, death is not the scariest thing at all."}
 ];
 
-console.log(test);
+pullRandomQuotes();
 
-pullQuestionData();
-
-function pullQuestionData() {
+function pullRandomQuotes() {
 
     // fetch(`https://animechan.vercel.app/api/quotes`)
     // .then(function (response) {
     //     return response.json();
     // })
     // .then(function (data) {
-    //     printQuestionData(data);
+    //     processQuizItems(data);
     // })
 
-    printQuestionData(test);
+    processQuizItems(test);
 }
 
-// function printQuestionData(data) {
-//     var answerList = [];
-//     var answerItem = {};
-//     console.log(data);
-//     console.log("Anime Title: " + data[0].anime);
-//     console.log("Anime Quote: " + data[0].quote);
-//     console.log("Quote length: " + (data[0].quote).length);
-//     console.log("Correct Answer: " + data[0].character);
-//     answerItem = {
-//         character: data[0].character,
-//         answer: true
-//         };
-//     answerList.push(answerItem);
-//     console.log("Wrong Answer 1: " + data[1].character);
-//     answerItem = {
-//         character: data[1].character,
-//         answer: false
-//         };
-//     answerList.push(answerItem);
-//     console.log("Wrong Answer 2: " + data[2].character);
-//     answerItem = {
-//         character: data[2].character,
-//         answer: false
-//         };
-//     answerList.push(answerItem);
-//     console.log("Wrong Answer 3: " + data[3].character);
-//     answerItem = {
-//         character: data[3].character,
-//         answer: false
-//         };
-//     answerList.push(answerItem);
-//     console.log("Initial Answers List:")
-//     console.log(JSON.parse(JSON.stringify(answerList)));
-
-//     var i = answerList.length, k , temp;      // k is to generate random index and temp is to swap the values
-//     while(--i > 0){
-//         k = Math.floor(Math.random() * (i+1));
-//         temp = answerList[k];
-//         answerList[k] = answerList[i];
-//         answerList[i] = temp;
-//     }
-//    console.log("Randomized Answers List:")
-//    console.log(JSON.parse(JSON.stringify(answerList)));
-// }
-
-
-function printQuestionData(data) {
+function processQuizItems(data) {
     // Declare Variables
-    var quizQuestion = "";
+    var chosenQuote = "";
     var answerList = [];
     var answerItem = {};
     var i = 0;
-
     // Loop through data, changing quiz question to each quote until the received quote is between 0 and 150 characters in length
     do {
-        quizQuestion = data[i].quote
-        console.log(quizQuestion);
+        chosenQuote = data[i].quote
         i = i + 1;
-    } while (quizQuestion.length = 0 || quizQuestion.length >= 150 );
-
-    // Console log the question that was chosen
-    console.log("Chosen quote:")
-    console.log(quizQuestion);
-
+    } while (chosenQuote.length = 0 || chosenQuote.length >= 150 );
     // Find the index of the question that was chosen
     var indexOfObject = data.findIndex(data => {
-        return data.quote === quizQuestion;
+        return data.quote === chosenQuote;
       });
-
-    console.log(indexOfObject);
-
     // Create the first potential answer based on the character name and anime title and set it as the true answer
     answerItem = {
         text: (data[indexOfObject].character + " from: " + data[indexOfObject].anime),
         answer: true
         };
-
-    console.log (answerItem);
-
     // Remove the selected quote object from the overall array of potential quotes
     data.splice(indexOfObject, 1);
-    console.log(data);
-
     // Push first answer object to list of answers
     answerList.push(answerItem);
-    console.log(answerList);
-
     // Loop over remaining quotes data creating false answers, deleting answers that excede total list length of 4 answers
     data.forEach(function(data) {
         answerItem = {
@@ -128,10 +63,6 @@ function printQuestionData(data) {
             answerList.length = 4;
         }
     });
-
-    console.log("Answers List: ")
-    console.log(answerList);
-
     // Shuffle answer list
     var i = answerList.length, k , temp;      // k is to generate random index and temp is to swap the values
     while(--i > 0){
@@ -140,43 +71,14 @@ function printQuestionData(data) {
         answerList[k] = answerList[i];
         answerList[i] = temp;
     }
-    console.log("Randomized Answers List:")
-    console.log(answerList);
 
-
-
-
-
+    printQuiz(chosenQuote, answerList);
 }
 
-// Throwout any questions that are too long
+function printQuiz(quote, answers) {
+    console.log("Chosen quote:")
+    console.log(quote);
+    console.log("Randomized Answers List:")
+    console.log(answers);
 
-
-// historyList.forEach(function (historyItem) {
-//     weatherHistoryEl.append(`
-//     <div class="col-5 col-md-4 col-lg-10 my-1 px-2">
-//     <input class="btn btn-secondary col-12" type="button" data-loc="${historyItem.geo}" value="${historyItem.city}">
-//     </div>
-//     `);
-// })
-
-
-// function addItemToHistory () {
-//     // If searched item is not already located on list, then create Object using searched info
-//     if (!historyList.some(e => e.geo === geoLocation)) {
-//         var historyItem = {
-//             geo: geoLocation,
-//             city: cityLocation
-//             };each
-//         // Attach city object to start of list
-//         historyList.unshift(historyItem);
-//         // History list is limited to 6 items, removing the last item on the list
-//         if (historyList.length > 6) {
-//             historyList.length = 6;
-//         }
-//         // Stores history list to local storage
-//         localStorage.setItem("historyList", JSON.stringify(historyList));
-//         // Runs function to display search history onto page.
-//         populateSearchHistory();
-//       }
-// }
+};
