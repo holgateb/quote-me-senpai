@@ -1,4 +1,8 @@
 
+var answersEl = document.getElementById("answers");
+var winStreak = 0;
+var bestWinStreak = 0;
+
 
 var test = [
     {"anime":"Gintama","character":"Gintoki Sakata","quote":"It's often said, \"People who are similar can be called friends\", right? You haven't been making a good life for yourself, have you? Well, I guess I'm no better.. People don't try to make a life that they can't be proud of... They have the intention of staying on the straight path, but out of blue, they're in the dirt. But, even so, with heart and soul you try to brake through. There will be a day, that even dirt will dry and fall off.\n\n(Gintoki to Catherine\n\"Gintama chapter 24, page 19\")"},
@@ -17,15 +21,15 @@ pullRandomQuotes();
 
 function pullRandomQuotes() {
 
-    fetch(`https://animechan.vercel.app/api/quotes`)
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (data) {
-        processQuizItems(data);
-    })
+    // fetch(`https://animechan.vercel.app/api/quotes`)
+    // .then(function (response) {
+    //     return response.json();
+    // })
+    // .then(function (data) {
+    //     processQuizItems(data);
+    // })
 
-    // processQuizItems(test);
+    processQuizItems(test);
 }
 
 function processQuizItems(data) {
@@ -81,11 +85,6 @@ function processQuizItems(data) {
 
 function printQuiz(quote, answers) {
     var quoteEl = document.getElementById("quote");
-    var answersEl = document.getElementById("answers");
-    console.log("Chosen quote:")
-    console.log(quote);
-    console.log("Randomized Answers List:")
-    console.log(answers);
     quoteEl.innerHTML = "";
     quoteEl.innerHTML = `<h2 class="center-align">${quote}</h2>`
     answersEl.innerHTML = "";
@@ -93,3 +92,27 @@ function printQuiz(quote, answers) {
         answersEl.innerHTML += `<button style="text-transform:none" class="btn" data-answer="${data.answer}">${data.text}</button>` 
     });
 };
+
+// Adds event listener to to answers Div
+answersEl.addEventListener("click", answerResponse)
+
+// On clicking inside answers div, if the target has a class of button it'll check the dataset value for answer and respond with whether it's correct or wrong.
+function answerResponse(event) {
+    if(event.target.matches(".btn")){
+        if(event.target.dataset.answer === "true"){
+            winStreak = (winStreak + 1);
+            console.log("Win Streak is: " + winStreak);
+            if(winStreak > bestWinStreak) {
+                bestWinStreak = winStreak;
+            }
+            // To be replaced by correct answer modal
+            alert("Correct Answer!")
+        } else if(event.target.dataset.answer === "false"){
+            winStreak = 0;
+            console.log("Win Streak is: " + winStreak);
+            // to be replaced by wrong answer modal
+            alert("Wrong Answer!")
+        }
+    }
+};
+
