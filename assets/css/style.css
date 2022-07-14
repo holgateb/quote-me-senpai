@@ -18,6 +18,14 @@ main {
     flex: 1 0 auto;
   }
 
+.start {
+    justify-content: center;
+    align-content: center;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
 .gif {
     justify-content: center;
     background-image: "";

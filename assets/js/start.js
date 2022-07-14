@@ -1,6 +1,10 @@
+var startBtn = document.querySelector('startBtn')
+
 function startGame(){
     //hide the main page
-    main.classList.add("hide");
+    hidden.classList.add("hide");
     //show the quiz start screen
-    hidden.classList.remove("hide");
+    main.classList.remove("hide");
 };
+
+startBtn.addEventListener('click', function(startGame));
