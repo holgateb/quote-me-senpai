@@ -1,10 +1,13 @@
-var startBtn = document.querySelector('startBtn')
+var startBtn = document.querySelector('#startButton')
+var startEl = document.querySelector('#start')
+var mainEl = document.querySelector('#main')
 
-function startGame(){
+function startGame() {
     //hide the main page
-    hidden.classList.add("hide");
+    startEl.classList.add("hide");
     //show the quiz start screen
-    main.classList.remove("hide");
+    mainEl.classList.remove("hide");
 };
 
-startBtn.addEventListener('click', function(startGame));
+//Event listener for button to run function startGame
+startBtn.addEventListener('click', startGame);
