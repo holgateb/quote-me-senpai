@@ -1,4 +1,3 @@
-<<<<<<< ACD-Success_And_Failure_Texts
 // alert('JS File is connected');
 
 
@@ -7,8 +6,6 @@ $( document ).ready(function() {
     $('#modal1').on('click', function() {
     });
   });
-=======
-
 
 var test = [
     {"anime":"Gintama","character":"Gintoki Sakata","quote":"It's often said, \"People who are similar can be called friends\", right? You haven't been making a good life for yourself, have you? Well, I guess I'm no better.. People don't try to make a life that they can't be proud of... They have the intention of staying on the straight path, but out of blue, they're in the dirt. But, even so, with heart and soul you try to brake through. There will be a day, that even dirt will dry and fall off.\n\n(Gintoki to Catherine\n\"Gintama chapter 24, page 19\")"},
@@ -103,4 +100,3 @@ function printQuiz(quote, answers) {
         answersEl.innerHTML += `<button style="text-transform:none" class="btn" data-answer="${data.answer}">${data.text}</button>` 
     });
 };
->>>>>>> main
