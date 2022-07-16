@@ -4,32 +4,23 @@ body {
     flex-direction: column;
 }
 
-.brand-logo {
-    color: black;
+main {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
-H2 {
+h2 {
     font-weight: bolder;
     font-size: larger;
-    
 }
 
-main {
-    flex: 1 0 auto;
-  }
-
-.gif {
-    justify-content: center;
-    background-image: "";
+#quote {
+    color: white;
 }
 
 .buttons {
     display: grid;
     gap: 10px;
-}
-
-footer {
-    display: flex;
-    flex-direction: column;
-   
 }
