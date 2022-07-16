@@ -1,4 +1,3 @@
-<<<<<<< ACD-Success_And_Failure_Texts
 // alert('JS File is connected');
 
 
@@ -7,7 +6,6 @@ $( document ).ready(function() {
     $('#modal1').on('click', function() {
     });
   });
-=======
 
 
 var test = [
@@ -103,4 +101,3 @@ function printQuiz(quote, answers) {
         answersEl.innerHTML += `<button style="text-transform:none" class="btn" data-answer="${data.answer}">${data.text}</button>` 
     });
 };
->>>>>>> main
