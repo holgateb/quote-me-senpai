@@ -9,7 +9,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
 
@@ -24,7 +27,12 @@
           <li><a href="collapsible.html" class="black-text">JavaScript</a></li>
         </ul>
         <!-- Dropdown Button that only appears on medium and smaller screens when the normal links disappear -->
-        <a class="dropdown-trigger hide-on-large-only right" href="#" data-target="menuDropdown"><i class="medium material-icons black-text btn">dehaze</i></a>
+        <a
+          class="dropdown-trigger hide-on-large-only right"
+          href="#"
+          data-target="menuDropdown"
+          ><i class="medium material-icons black-text btn">dehaze</i></a
+        >
         <!-- Dropdown Contents -->
         <ul id="menuDropdown" class="dropdown-content teal">
           <li><a href="./index.html" class="black-text">Home</a></li>
@@ -35,7 +43,8 @@
       <!-- Extended navbar for displaying win streaks that only shows when game starts -->
       <div class="nav-content teal lighten-4 hide" id="streakBar">
         <div class="center black-text">
-          Current Win Streak: <span id="winStreak">0</span> || Best Win Streak: <span id="bestWinStreak"></span>
+          Current Win Streak: <span id="winStreak">0</span> || Best Win Streak:
+          <span id="bestWinStreak"></span>
         </div>
       </div>
     </nav>
@@ -44,7 +53,8 @@
       <h2>Welcome to Quote Me, Senpai!</h2>
       <p>
         Put your anime knowledge to the test with this comprehensive quiz
-        containing hundreds of the most memorable quotes from your favorite anime films.
+        containing hundreds of the most memorable quotes from your favorite
+        anime films.
       </p>
       <button id="startButton" class="btn">Start Game</button>
     </div>
@@ -61,32 +71,44 @@
       </div>
 
       <div class="row">
-        <div class="col s3">
-          <img src="./assets/images/alien.jpg" alt="" class="responsive-img" />
-        </div>
-        <div class="buttons col s6 hide" id="answers">
+        <div class="buttons col s6 offset-s3 hide" id="answers">
           <!-- Left emtpy to be filled dynamically by answers -->
-        </div>
-        <div class="col s3">
-          <img src="./assets/images/alien.jpg" alt="" class="responsive-img" />
         </div>
       </div>
     </main>
 
+    <div>
+      <button onclick="screenshot()" class="btn">Screenshot Quote</button>
+    </div>
+
+    <script>
+            function screenshot() {
+            html2canvas(document.querySelector("#quote")).then(canvas => {
+          document.body.appendChild(canvas)
+      });
+    };
+    </script>
+
     <!-- MODAL STUFF -->
 
     <!-- Modal Trigger -->
-    <a class="waves-effect waves-light btn  modal-trigger" href="#modal1">Modal</a>
+    <a class="waves-effect waves-light btn modal-trigger" href="#modal1"
+      >Modal</a
+    >
 
     <!-- Modal Structure -->
     <div id="modal1" class="modal">
-        <div class="modal-content">
-            <h4>Modal Header</h4>
-            <p>A bunch of text</p>
-        </div>
-        <div class="modal-footer">
-            <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
-        </div>
+      <div class="modal-content">
+        <h4>Modal Header</h4>
+        <p>A bunch of text</p>
+      </div>
+      <div class="modal-footer">
+        <a
+          href="#!"
+          class="modal-action modal-close waves-effect waves-green btn-flat"
+          >Agree</a
+        >
+      </div>
     </div>
 
     <footer class="page-footer teal lighten-4">
@@ -115,12 +137,14 @@
       </div>
     </footer>
 
-  <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous">
-  </script>
-  <script 
-  src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script src="./assets/js/start.js"></script>
-  <script type="text/javascript" src="./assets/js/script.js"></script>
-</body>
-
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.js"
+      integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./assets/js/start.js"></script>
+    <script type="text/javascript" src="./assets/js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  </body>
 </html>
