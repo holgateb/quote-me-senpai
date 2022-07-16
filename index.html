@@ -82,10 +82,11 @@
     </div>
 
     <script>
-            function screenshot();
+            function screenshot() {
             html2canvas(document.querySelector("#quote")).then(canvas => {
           document.body.appendChild(canvas)
       });
+    };
     </script>
 
     <!-- MODAL STUFF -->
