@@ -113,8 +113,9 @@ function get_successTextAndGif () {
     var array_successEndpoints = ["highfive", "happy", "thumbsup", "smile", "dance"];
 
     var modalText = get_random(array_successText);
-    var modalGif  = "https://nekos.best/api/v2/thumbsup?amount=20https://nekos.best/api/v2/"+get_random(array_successEndpoints)
+    var modalGif  = "https://nekos.best/api/v2/thumbsup?amount=20https://nekos.best/api/v2/"+get_random(array_successEndpoints);
 
+    change_modalTextAndGif (modalText,modalGif);
 
 }
 
