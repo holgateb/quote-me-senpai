@@ -4,23 +4,48 @@ body {
     flex-direction: column;
 }
 
-main {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-}
-
-h2 {
+H2 {
     font-weight: bolder;
     font-size: larger;
 }
 
-#quote {
-    color: white;
+#winStreak, #bestWinStreak {
+    font-weight: bold;
+}
+
+/* Sets dropdown menu to always have set width */
+#menuDropdown {
+    width: 110px !important;
+}
+
+main {
+    flex: 1 0 auto;
+  }
+
+.start {
+    justify-content: center;
+    align-content: center;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+.gif {
+    justify-content: center;
+    background-image: "";
 }
 
 .buttons {
     display: grid;
     gap: 10px;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.hide {
+    display: none;
 }
