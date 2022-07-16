@@ -1,13 +1,27 @@
 // alert('JS File is connected');
 
-//modal functionality script - ACD
+var answersEl = document.getElementById("answers");
+var quoteEl = document.getElementById("quote");
+var winStreakEl = document.getElementById("winStreak");
+var bestWinStreakEl = document.getElementById("bestWinStreak");
+var winStreak = 0;
+var bestWinStreak = (localStorage.getItem("bestWinStreak"));
+if(bestWinStreak === null) {
+    bestWinStreak = 0;
+}
+bestWinStreakEl.textContent = bestWinStreak;
+
+// modal functionality script
 $( document ).ready(function() {
     $('.modal').modal();
     $('#modal1').on('click', function() {
     });
   });
 
+//   Event trigger for dropdown menu
+  $('.dropdown-trigger').dropdown();
 
+//   Test variable so I don't use up my API hourly requests
 var test = [
     {"anime":"Gintama","character":"Gintoki Sakata","quote":"It's often said, \"People who are similar can be called friends\", right? You haven't been making a good life for yourself, have you? Well, I guess I'm no better.. People don't try to make a life that they can't be proud of... They have the intention of staying on the straight path, but out of blue, they're in the dirt. But, even so, with heart and soul you try to brake through. There will be a day, that even dirt will dry and fall off.\n\n(Gintoki to Catherine\n\"Gintama chapter 24, page 19\")"},
     {"anime":"Shinsekai Yori","character":"Shinsekai Yori","quote":"The power of imagination is what changes everything."},
@@ -25,15 +39,15 @@ pullRandomQuotes();
 
 function pullRandomQuotes() {
 
-    fetch(`https://animechan.vercel.app/api/quotes`)
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (data) {
-        processQuizItems(data);
-    })
+    // fetch(`https://animechan.vercel.app/api/quotes`)
+    // .then(function (response) {
+    //     return response.json();
+    // })
+    // .then(function (data) {
+    //     processQuizItems(data);
+    // })
 
-    // processQuizItems(test);
+    processQuizItems(test);
 }
 
 function processQuizItems(data) {
@@ -57,7 +71,6 @@ function processQuizItems(data) {
         answer: true
         };
     var correctAnswer = data[indexOfObject].character
-    console.log(correctAnswer);
     // Remove the selected quote object from the overall array of potential quotes
     data.splice(indexOfObject, 1);
     // Push first answer object to list of answers
@@ -88,12 +101,6 @@ function processQuizItems(data) {
 }
 
 function printQuiz(quote, answers) {
-    var quoteEl = document.getElementById("quote");
-    var answersEl = document.getElementById("answers");
-    console.log("Chosen quote:")
-    console.log(quote);
-    console.log("Randomized Answers List:")
-    console.log(answers);
     quoteEl.innerHTML = "";
     quoteEl.innerHTML = `<h2 class="center-align">${quote}</h2>`
     answersEl.innerHTML = "";
@@ -125,3 +132,38 @@ function change_modalTextAndGif (modalText,modalGif) {
     document.getElementById("resultGif").src = modalGif;
 
 }
+// Adds event listener to to answers Div
+answersEl.addEventListener("click", answerResponse)
+
+// On clicking inside answers div, if the target has a class of button it'll check the dataset value for answer and respond with whether it's correct or wrong.
+function answerResponse(event) {
+    if(event.target.matches(".btn")){
+        if(event.target.dataset.answer === "true"){
+            // Increases win streak value
+            winStreak = (winStreak + 1);
+            console.log("Win Streak is: " + winStreak);
+            // Prints new win streak to page
+            winStreakEl.textContent = winStreak;
+            // What to do if current win streak is higher than recorded best win streak
+            if(winStreak > bestWinStreak) {
+                // sets user's best win streak to current win streak
+                bestWinStreak = winStreak;
+                // stores best win streak to local storage
+                localStorage.setItem("bestWinStreak", bestWinStreak);
+                // prints new best win streak to page
+                bestWinStreakEl.textContent = bestWinStreak;
+                M.toast({html: 'New Best Win Streak!', classes: 'rounded'})
+            }
+            // To be replaced by correct answer modal
+            alert("Correct Answer!")
+        } else if(event.target.dataset.answer === "false"){
+            // Set win streak back to 0
+            winStreak = 0;
+            console.log("Win Streak is: " + winStreak);
+            winStreakEl.textContent = winStreak;
+            // to be replaced by wrong answer modal
+            alert("Wrong Answer!")
+        }
+    }
+};
+

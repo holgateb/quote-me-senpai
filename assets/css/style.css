@@ -4,18 +4,31 @@ body {
     flex-direction: column;
 }
 
-.brand-logo {
-    color: black;
-}
-
 H2 {
     font-weight: bolder;
     font-size: larger;
     
 }
 
+#winStreak, #bestWinStreak {
+    font-weight: bold;
+}
+
+/* Sets dropdown menu to always have set width */
+#menuDropdown {
+    width: 110px !important;
+}
+
 main {
     flex: 1 0 auto;
+  }
+
+.start {
+    justify-content: center;
+    align-content: center;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
 .gif {
@@ -60,4 +73,8 @@ footer {
 #resultText {
     font-size: 25px;
     margin-bottom: 25px;
+}               
+
+.hide {
+    display: none;
 }
