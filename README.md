@@ -22,33 +22,16 @@ https://knowyourmeme.com/photos/1495828-ranimemes
 ## Possible Success Endpoints
  
 ```
-highfive
-happy
-thumbsup
-smile
-dance
+"highfive", "happy", "thumbsup", "smile", "dance"
 
 ```
 
-## Possible Success Text
+<!-- ## Possible Success Text
 
 ```
-YES!
-I knew you could do it!
-I knew you were a good bet!
-I bet you have a Crunchyroll AND a Funimation account!
-Yeah! Let's get a good streak going!
-Woohoo! 
-Nice job!
-Wow!
-I'm impressed!
-Well done! That was a hard one. 
-Let's keep it going!
-Wow! I didn't even know that one!
-You really must be an anime fan!
-It was so cool how you got that answer right.
+"YES!", "I knew you could do it!", "I knew you were a good bet!", "I bet you have a Crunchyroll AND a Funimation account!", "Yeah! Let's get a good streak going!", "Woohoo!" , "Nice job!", "Wow!", "I'm impressed!", "Well done! That was a hard one.", "Let's keep it going!", "Wow! I didn't even know that one!", "You really must be an anime fan!", "It was so cool how you got that answer right."
 
-```
+``` -->
 
 # Failure 
 ## Possible Failure Endpoints (mocking)
