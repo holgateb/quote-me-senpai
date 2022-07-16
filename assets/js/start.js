@@ -3,6 +3,7 @@ var startEl = document.querySelector('#start')
 var answersEl = document.getElementById("answers");
 var quoteEl = document.getElementById("quote");
 var streakBarEl = document.getElementById("streakBar")
+var screenShotBtn = document.getElementById("screenShotBtn")
 
 function startGame() {
     //hide the main page
@@ -11,6 +12,8 @@ function startGame() {
     answersEl.classList.remove("hide");
     quoteEl.classList.remove("hide");
     streakBarEl.classList.remove("hide");
+    screenShotBtn.classList.remove("hide");
+
 };
 
 //Event listener for button to run function startGame
