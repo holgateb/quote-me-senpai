@@ -119,8 +119,8 @@ function get_successTextAndGif () {
 }
 
 function change_modalTextAndGif (modalText,modalGif) {
-    document.getElementById("resultText").innerHTML = "New text!";
     
-
+    document.getElementById("resultText").innerHTML = modalText;
+    document.getElementById("resultGif").src = modalGif;
 
 }
