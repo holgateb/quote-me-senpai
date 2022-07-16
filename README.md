@@ -12,7 +12,7 @@ fetch('https://animechan.vercel.app/api/quotes/character?name=saitama')
      .then(quotes => console.log(quotes))
 
 # API - get anime images and gifs
-https://nekos.best/api/v2/thumbsup?amount=20https://nekos.best/api/v2/thumbsup?amount=20
+https://nekos.best/api/v2/thumbsup?amount=20https://nekos.best/api/v2/thumbsup
 
 
 # Image Source
