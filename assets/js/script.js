@@ -1,6 +1,6 @@
 // alert('JS File is connected');
 
-
+//modal functionality script - ACD
 $( document ).ready(function() {
     $('.modal').modal();
     $('#modal1').on('click', function() {
@@ -101,3 +101,11 @@ function printQuiz(quote, answers) {
         answersEl.innerHTML += `<button style="text-transform:none" class="btn" data-answer="${data.answer}">${data.text}</button>` 
     });
 };
+
+//get random function for modal api and texts uses - ACD
+
+function get_random (list) {
+    return list[Math.floor((Math.random()*list.length))]; 
+}
+
+
