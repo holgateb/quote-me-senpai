@@ -97,15 +97,6 @@
       </div>
     </div>
 
-    <script>
-      function screenshot() {
-        html2canvas(document.querySelector("#quote")).then((canvas) => {
-          document.body.appendChild(canvas);
-          console.log(canvas)
-        });
-      }
-    </script>
-
     <!-- MODAL STUFF -->
 
     <!-- Modal Trigger -->
@@ -162,6 +153,16 @@
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    
+    <script>
+      function screenshot() {
+        html2canvas(document.querySelector("#quote")).then((canvas) => {
+          document.body.appendChild(canvas);
+          console.log(canvas)
+        });
+      }
+    </script>
+    
     <script src="./assets/js/start.js"></script>
     <script type="text/javascript" src="./assets/js/script.js"></script>
     
