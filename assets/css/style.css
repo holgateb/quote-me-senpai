@@ -4,14 +4,19 @@ body {
     flex-direction: column;
 }
 
-.brand-logo {
-    color: black;
-}
-
 H2 {
     font-weight: bolder;
     font-size: larger;
     
+}
+
+#winStreak, #bestWinStreak {
+    font-weight: bold;
+}
+
+/* Sets dropdown menu to always have set width */
+#menuDropdown {
+    width: 110px !important;
 }
 
 main {
