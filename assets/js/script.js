@@ -25,7 +25,8 @@ $( document ).ready(function() {
 $( document ).ready(function() {
     $('.modal_resetTrigger').on('click', function() {
         change_modalTextAndGif ("","");
-        pullRandomQuotes();
+        // UNCOMMENT THE BELOW LINE OUT WHEN READY FR FULL FUNCTIONALITY
+        // pullRandomQuotes();
     });
   });
 
