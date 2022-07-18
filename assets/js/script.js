@@ -136,7 +136,65 @@ function get_successTextAndGif () {
 
     fetch(modalGifAPI)
     .then(response => response.json())
-    // .then(data => modalGif = data)
+    .then(json => modalGif = (json.results[0].url))
+    .then(() => console.log("modalGif postFetch is: " + modalGif))
+
+    .then(function () {
+            change_modalTextAndGif (modalText,modalGif);
+        });
+
+}
+
+function get_failureTextAndGif () {
+
+    var array_failureTextMocking = ["Wrong.","Nope.","What were you thinking?","Wow! THAT got you?","Guess you skipped cram school.","You couldn't get that one right?","Ha! I knew you couldn't afford Crunchyroll.","I bet you don't even have a Crunchyroll account.","Wow! I bet you watch anime on YouTube.","I bet you think Avatar: The Last Airbender is anime!","Ha! But that was an easy one!"];
+    var array_failureTextDisappointed = ["I'm not mad; I'm just disappointed.","I guess I expected too much.","What a pity.","What were you thinking?","I guess you'll have to try again.","I thought you liked anime!","Don't give up...","It's okay, you'll get it next time...","I guess I lost that bet..."];
+    var array_failureTextViolent = ["Not even close!","Not this time!","NOPE!","Pathetic!","Not today!","No streak for you!","I knew you were all talk!"
+];
+
+    var array_failureSubtypes = [array_failureTextMocking,array_failureTextDisappointed,array_failureTextViolent];
+    var modalSubtype = get_random(array_failureSubtypes);
+
+    var array_failureEndpointsMocking = ["laugh","stare","baka","bored"];
+    var array_failureEndpointsDisappointed = ["pout","facepalm","cry","shrug"];
+    var array_failureEndpointsViolent = ["punch","kick","slap"];
+
+
+    // var modalText = "";
+    // var modalGifAPI  = "https://nekos.best/api/v2/"+get_random(array_successEndpoints);
+    // var modalGif;
+
+    if (modalSubtype === array_failureTextMocking) {
+        console.log("modalSubtype === array_failureTextMocking");
+        var modalText = get_random(array_failureTextMocking);
+        var modalGifAPI  = "https://nekos.best/api/v2/"+get_random(array_failureEndpointsMocking);
+        var modalGif;
+
+
+    } else if (modalSubtype === array_failureTextDisappointed) {
+        console.log("modalSubtype === array_failureTextDisappointed");
+        var modalText = get_random(array_failureTextDisappointed);
+        var modalGifAPI  = "https://nekos.best/api/v2/"+get_random(array_failureEndpointsDisappointed);
+        var modalGif;
+
+    } else if (modalSubtype === array_failureTextViolent) {
+        console.log("modalSubtype === array_failureTextViolent");
+        var modalText = get_random(array_failureTextViolent);
+        var modalGifAPI  = "https://nekos.best/api/v2/"+get_random(array_failureEndpointsViolent);
+        var modalGif;
+
+    } else {
+        console.log("modalSubtype error");
+
+    }
+
+    console.log("modalGif preFetch is: " + modalGif);
+
+    console.log("modalGifAPI is: " + modalGifAPI);
+
+
+    fetch(modalGifAPI)
+    .then(response => response.json())
     .then(json => modalGif = (json.results[0].url))
     .then(() => console.log("modalGif postFetch is: " + modalGif))
 
@@ -183,6 +241,9 @@ function answerResponse(event) {
             // To be replaced by correct answer modal
             alert("Correct Answer!")
         } else if(event.target.dataset.answer === "false"){
+
+            get_failureTextAndGif ()
+
             // Set win streak back to 0
             winStreak = 0;
             console.log("Win Streak is: " + winStreak);
