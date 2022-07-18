@@ -24,7 +24,7 @@ $( document ).ready(function() {
 //   Event trigger for dropdown menu
 $( document ).ready(function() {
     $('.modal_resetTrigger').on('click', function() {
-        change_modalTextAndGif ("","");
+        change_modalTextAndGif (" ","");
         // UNCOMMENT THE BELOW LINE OUT WHEN READY FR FULL FUNCTIONALITY
         // pullRandomQuotes();
     });
