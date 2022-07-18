@@ -54,6 +54,7 @@ footer {
 
 #resultGif {
     border: 5px solid #616161;
+    max-width: 90%;
 }
 
 #giveUpBtn {

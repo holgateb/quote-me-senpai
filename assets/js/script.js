@@ -21,6 +21,14 @@ $( document ).ready(function() {
 //   Event trigger for dropdown menu
   $('.dropdown-trigger').dropdown();
 
+//   Event trigger for dropdown menu
+$( document ).ready(function() {
+    $('.modal_resetTrigger').on('click', function() {
+        change_modalTextAndGif ("","");
+        pullRandomQuotes();
+    });
+  });
+
 //   Test variable so I don't use up my API hourly requests
 var test = [
     {"anime":"Gintama","character":"Gintoki Sakata","quote":"It's often said, \"People who are similar can be called friends\", right? You haven't been making a good life for yourself, have you? Well, I guess I'm no better.. People don't try to make a life that they can't be proud of... They have the intention of staying on the straight path, but out of blue, they're in the dirt. But, even so, with heart and soul you try to brake through. There will be a day, that even dirt will dry and fall off.\n\n(Gintoki to Catherine\n\"Gintama chapter 24, page 19\")"},
@@ -197,13 +205,14 @@ function get_failureTextAndGif () {
 
 }
 
-
+// changes response text and gif
 function change_modalTextAndGif (modalText,modalGif) {
     
     document.getElementById("resultText").innerHTML = modalText;
     document.getElementById("resultGif").src = modalGif;
 
 }
+
 // Adds event listener to to answers Div
 answersEl.addEventListener("click", answerResponse)
 
