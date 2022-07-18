@@ -115,16 +115,37 @@ function get_random (list) {
     return list[Math.floor((Math.random()*list.length))]; 
 }
 
+var testGifAPI = [
+    {"anime_name":"Boku wa Tomodachi ga Sukunai","url":"https://nekos.best/api/v2/slap/013.gif"}
+];
+
+
+
 function get_successTextAndGif () {
     var array_successText = ["YES!", "I knew you could do it!", "I knew you were a good bet!", "I bet you have a Crunchyroll AND a Funimation account!", "Yeah! Let's get a good streak going!", "Woohoo!" , "Nice job!", "Wow!", "I'm impressed!", "Well done! That was a hard one.", "Let's keep it going!", "Wow! I didn't even know that one!", "You really are an anime fan!", "It was so cool how you got that answer right."];
     var array_successEndpoints = ["highfive", "happy", "thumbsup", "smile", "dance"];
 
     var modalText = get_random(array_successText);
-    var modalGif  = "https://nekos.best/api/v2/thumbsup?amount=20https://nekos.best/api/v2/"+get_random(array_successEndpoints);
+    var modalGifAPI  = "https://nekos.best/api/v2/"+get_random(array_successEndpoints);
+    var modalGif;
 
-    change_modalTextAndGif (modalText,modalGif);
+    console.log("modalGif preFetch is: " + modalGif);
+
+    console.log("modalGifAPI is: " + modalGifAPI);
+
+
+    fetch(modalGifAPI)
+    .then(response => response.json())
+    // .then(data => modalGif = data)
+    .then(json => modalGif = (json.results[0].url))
+    .then(() => console.log("modalGif postFetch is: " + modalGif))
+
+    .then(function () {
+            change_modalTextAndGif (modalText,modalGif);
+        });
 
 }
+
 
 function change_modalTextAndGif (modalText,modalGif) {
     
@@ -139,6 +160,11 @@ answersEl.addEventListener("click", answerResponse)
 function answerResponse(event) {
     if(event.target.matches(".btn")){
         if(event.target.dataset.answer === "true"){
+            //finds success modal text and endpoint & changes modal results
+            get_successTextAndGif ();
+
+
+
             // Increases win streak value
             winStreak = (winStreak + 1);
             console.log("Win Streak is: " + winStreak);
