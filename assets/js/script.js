@@ -129,6 +129,8 @@ function get_successTextAndGif () {
     var modalGifAPI  = "https://nekos.best/api/v2/"+get_random(array_successEndpoints);
     var modalGif;
 
+    // document.getElementById("successOrFailure").innerHTML = "Correct Answer";
+
     // console.log("modalGif preFetch is: " + modalGif);
     // console.log("modalGifAPI is: " + modalGifAPI);
 
@@ -155,6 +157,7 @@ function get_failureTextAndGif () {
     var array_failureEndpointsDisappointed = ["pout","facepalm","cry","shrug"];
     var array_failureEndpointsViolent = ["punch","kick","slap"];
 
+    // document.getElementById("successOrFailure").innerHTML = "Wrong Answer";
 
     if (modalSubtype === array_failureTextMocking) {
         console.log("modalSubtype === array_failureTextMocking");
@@ -229,7 +232,7 @@ function answerResponse(event) {
                 M.toast({html: 'New Best Win Streak!', classes: 'rounded'})
             }
             // To be replaced by correct answer modal
-            alert("Correct Answer!")
+            // alert("Correct Answer!")
         } else if(event.target.dataset.answer === "false"){
 
             get_failureTextAndGif ()
@@ -239,7 +242,7 @@ function answerResponse(event) {
             console.log("Win Streak is: " + winStreak);
             winStreakEl.textContent = winStreak;
             // to be replaced by wrong answer modal
-            alert("Wrong Answer!")
+            // alert("Wrong Answer!")
         }
     }
 };
