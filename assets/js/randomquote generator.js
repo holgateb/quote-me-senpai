@@ -32,11 +32,11 @@ function processQuizItems(data) {
 
     if (data.quote.length >= 145){
         //console.log("hello");
-        return;   
+        pullRandomQuotes();  
     }
     else{
         displayQuestionEl.innerHTML=data.quote;
-        animedisplayEl.innerHTML = "Anime : " +  data.anime;
+        animedisplayEl.innerHTML = "Anime Name : " +  data.anime;
         characterdisplayEl.innerHTML = "Character : " + data.character;
 
         //console.log(data.quote);    
