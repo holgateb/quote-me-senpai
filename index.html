@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
+    <title>Quote Me, Senpai!</title>
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
@@ -71,7 +73,7 @@
       </div>
 
       <div class="row">
-        <div class="buttons col s6 offset-s3 hide" id="answers">
+        <div class="buttons col s6 offset-s3 hide modal-trigger" href="#modal1" id="answers">
           <!-- Left emtpy to be filled dynamically by answers -->
         </div>
       </div>
@@ -91,24 +93,17 @@
 
     <!-- MODAL STUFF -->
 
-    <!-- Modal Trigger -->
-    <a class="waves-effect waves-light btn modal-trigger" href="#modal1"
-      >Modal</a
-    >
-
     <!-- Modal Structure -->
-    <div id="modal1" class="modal">
-      <div class="modal-content">
-        <h4>Modal Header</h4>
-        <p>A bunch of text</p>
-      </div>
-      <div class="modal-footer">
-        <a
-          href="#!"
-          class="modal-action modal-close waves-effect waves-green btn-flat"
-          >Agree</a
-        >
-      </div>
+    <div id="modal1" class="modal ">
+        <div class="modal-content">
+            <!-- <h4 id="successOrFailure">Wrong Answer!</h4> -->
+            <h4 id="resultText"> </h4>
+            <img id="resultGif" src=""/>
+        </div>
+        <div class="modal-footer">
+            <!-- <a id="giveUpBtn" href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Give Up</a> -->
+            <a id="nextQuestionButton" href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat modal_resetTrigger">CONTINUE</a>
+        </div>
     </div>
 
     <footer class="page-footer teal lighten-4">

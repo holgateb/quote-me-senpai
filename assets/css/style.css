@@ -47,6 +47,35 @@ footer {
    
 }
 
+/* MODAL CSS STYLING */
+#modal1 {
+    text-align: center;
+}
+
+#resultGif {
+    border: 5px solid #616161;
+    max-width: 90%;
+}
+
+#giveUpBtn {
+    background-color: #bdbdbd;
+    margin-right: 5px;
+    margin-bottom: 10px;
+
+}
+
+#nextQuestionButton {
+    background-color: #26a69a;
+    margin-right: 10px;
+    margin-bottom: 10px;
+
+}
+
+#resultText {
+    font-size: 25px;
+    margin-bottom: 25px;
+}               
+
 .hide {
     display: none;
 }
