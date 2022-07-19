@@ -90,17 +90,17 @@
       </div>
     </main>
 
-    <div>
+    <!-- <div>
       <button onclick="screenshot()" class="btn">Screenshot Quote</button>
+      
+    </div> -->
+    <div class="container section">
+      <div class="row center-align">
+        <button onclick="screenshot()" id="screenShotBtn" class="btn hide">Screenshot Quote</button>
+        <a href="" id="blank"></a>
+      </div>
     </div>
 
-    <script>
-            function screenshot() {
-            html2canvas(document.querySelector("#quote")).then(canvas => {
-          document.body.appendChild(canvas)
-      });
-    };
-    </script>
 
     <!-- MODAL STUFF -->
 
@@ -123,9 +123,11 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="./assets/js/start.js"></script>
-    <script type="text/javascript" src="./assets/js/script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script type="text/javascript" src="./assets/js/script.js"></script>
+    <script src="./assets/js/start.js"></script>
+    <script src="./assets/js/screenshot.js"></script>
+    
   </body>
 
 </html>
