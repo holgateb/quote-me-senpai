@@ -1,10 +1,11 @@
 var questionTag = document.getElementById("question");
 var displayQuestionEl = document.getElementById("questionpanel");
-var correctAnswerEl = document.getElementById("btn-2");
-var answer1OptionEl =document.getElementById("btn-1");
-var answer3OptionEl =document.getElementById("btn-3");
-var answer4OptionEl =document.getElementById("btn-4");
-
+// var correctAnswerEl = document.getElementById("btn-2");
+// var answer1OptionEl =document.getElementById("btn-1");
+// var answer3OptionEl =document.getElementById("btn-3");
+// var answer4OptionEl =document.getElementById("btn-4");
+var animedisplayEl = document.getElementById("anime");
+var characterdisplayEl = document.getElementById("character")
 
  pullRandomQuotes();
 
@@ -22,11 +23,24 @@ function pullRandomQuotes() {
 }
 
 function processQuizItems(data) {
+    console.log(data);
 
     var i =0;
-    i = i+1;
-    displayQuestionEl.innerHTML = data.quote;
-    answerQuestion(data);
+    //i = i+1;
+   // displayQuestionEl.innerHTML = data.quote;
+    //console.log(data.quote.length);
+
+    if (data.quote.length >= 145){
+        //console.log("hello");
+        return;   
+    }
+    else{
+        displayQuestionEl.innerHTML=data.quote;
+        animedisplayEl.innerHTML = "Anime : " +  data.anime;
+        characterdisplayEl.innerHTML = "Character : " + data.character;
+
+        //console.log(data.quote);    
+    }
 
 }
 
