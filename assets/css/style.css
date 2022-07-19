@@ -55,7 +55,7 @@ main {
     padding-left: 20px;
     padding-right: 20px;
     position: absolute;
-    top: 40%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
@@ -91,11 +91,11 @@ main {
     gap: 10px;
 }
 
-footer {
+/* footer {
     display: flex;
     flex-direction: column;
    
-}
+} */
 
 /* MODAL CSS STYLING */
 #modal1 {
