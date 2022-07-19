@@ -13,52 +13,57 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
+    <!-- Link for Google Font 'Rajdhani' -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
 
   <body>
     <nav class="nav-extended">
-      <div class="nav-wrapper teal lighten-4">
+      <div class="nav-wrapper">
         <!-- Forced logo to stay to the left after resize -->
-        <a href="#" class="left brand-logo black-text">Quote Me, Senpai</a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down black-text">
-          <li><a href="./index.html" class="black-text">Home</a></li>
-          <li><a href="./randomquote.html" class="black-text">Random Quote Generator</a></li>
-          <li><a href="collapsible.html" class="black-text">JavaScript</a></li>
+        <a href="#" class="left brand-logo white-text">Quote Me, Senpai</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down white-text">
+          <li><a href="./index.html" class="white-text">Home</a></li>
+          <li><a href="./randomquote.html" class="white-text">Random Quote Generator</a></li>
+          <li><a href="collapsible.html" class="white-text">JavaScript</a></li>
         </ul>
         <!-- Dropdown Button that only appears on medium and smaller screens when the normal links disappear -->
         <a
           class="dropdown-trigger hide-on-large-only right"
           href="#"
           data-target="menuDropdown"
-          ><i class="medium material-icons black-text btn">dehaze</i></a
+          ><i class="medium material-icons white-text btn">dehaze</i></a
         >
         <!-- Dropdown Contents -->
-        <ul id="menuDropdown" class="dropdown-content teal">
-          <li><a href="./index.html" class="black-text">Home</a></li>
-          <li><a href="./randomquote.html" class="black-text">Random Quote Generator</a></li>
-          <li><a href="collapsible.html" class="black-text">JavaScript</a></li>
+        <ul id="menuDropdown" class="dropdown-content">
+          <li><a href="./index.html" class="white-text">Home</a></li>
+          <li><a href="./randomquote.html" class="white-text">Random Quote Generator</a></li>
+          <li><a href="collapsible.html" class="white-text">JavaScript</a></li>
         </ul>
       </div>
       <!-- Extended navbar for displaying win streaks that only shows when game starts -->
-      <div class="nav-content teal lighten-4 hide" id="streakBar">
-        <div class="center black-text">
+      <div class="nav-content hide" id="streakBar">
+        <div class="center white-text">
           Current Win Streak: <span id="winStreak">0</span> || Best Win Streak:
           <span id="bestWinStreak"></span>
         </div>
       </div>
     </nav>
-
-    <div id="start" class="center-align start">
-      <h2>Welcome to Quote Me, Senpai!</h2>
+    <!-- Start Page-->
+    <div id="start" class="center-align start white-text">
+      <h1>Welcome to Quote Me, Senpai!</h1>
       <p>
         Put your anime knowledge to the test with this comprehensive quiz
         containing hundreds of the most memorable quotes from your favorite
         anime films.
       </p>
-      <button id="startButton" class="btn">Start Game</button>
+      <button id="startButton" class="btn pulse">Start Game</button>
     </div>
-
+    <!-- Quiz Page-->
     <main id="main">
       <div class="container">
         <div class="row">
@@ -111,15 +116,6 @@
       </div>
     </div>
 
-    <footer class="page-footer teal lighten-4">
-      <div class="container">
-        <div class="row">
-          <div class="col s3"></div>
-          <div class="buttons col s6 lighten-2" id="answers">
-            <!-- Left emtpy to be filled dynamically by answers -->
-          </div>
-          <div class="col s3"></div>
-        </div>
     </main>
 
     <script
