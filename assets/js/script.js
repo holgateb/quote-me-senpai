@@ -26,7 +26,7 @@ $( document ).ready(function() {
     $('.modal_resetTrigger').on('click', function() {
         change_modalTextAndGif (" ","");
         // UNCOMMENT THE BELOW LINE OUT WHEN READY FR FULL FUNCTIONALITY
-        // pullRandomQuotes();
+        pullRandomQuotes();
     });
   });
 
@@ -44,19 +44,19 @@ var test = [
     {"anime":"Gakuen Alice","character":"Mikan Sakura","quote":"To me, death is not the scariest thing at all."}
 ];
 
-pullRandomQuotes();
+// pullRandomQuotes();
 
 function pullRandomQuotes() {
 
-    // fetch(`https://animechan.vercel.app/api/quotes`)
-    // .then(function (response) {
-    //     return response.json();
-    // })
-    // .then(function (data) {
-    //     processQuizItems(data);
-    // })
+    fetch(`https://animechan.vercel.app/api/quotes`)
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (data) {
+        processQuizItems(data);
+    })
 
-    processQuizItems(test);
+    // processQuizItems(test);
 }
 
 function processQuizItems(data) {
