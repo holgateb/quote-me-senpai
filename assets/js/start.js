@@ -14,7 +14,7 @@ function startGame() {
     streakBarEl.classList.remove("hide");
     screenShotBtn.classList.remove("hide");
 
-    pullRandomQuotes();
+    // pullRandomQuotes();
 };
 
 //Event listener for button to run function startGame
