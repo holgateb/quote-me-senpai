@@ -19,8 +19,23 @@ body {
 }
 
 h1 {
-    font-weight: 700;
-    text-shadow: 5px 2px 5px black;
+    color: white;
+    font-weight: 50px;
+}
+
+#anime {
+
+    color: white;
+    text-align: center;
+    font-weight: 50px;
+
+}
+
+#character {
+
+    color: white;
+    text-align: center;
+    font-weight: 50px;
 }
 
 p {
@@ -33,6 +48,16 @@ p {
     margin-left: 10px;
     font-weight: 700;
     color: white;
+}
+
+#nav-mobile{
+
+    color: white;
+    font-weight: 700;
+    margin-right:10px ;
+    width: 110px !important;
+
+
 }
 
 #winStreak, #bestWinStreak {
