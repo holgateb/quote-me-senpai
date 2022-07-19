@@ -44,7 +44,7 @@ var test = [
     {"anime":"Gakuen Alice","character":"Mikan Sakura","quote":"To me, death is not the scariest thing at all."}
 ];
 
-// pullRandomQuotes();
+pullRandomQuotes();
 
 function pullRandomQuotes() {
 
