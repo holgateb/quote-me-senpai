@@ -129,7 +129,7 @@ main {
     padding-left: 20px;
     padding-right: 20px;
     position: absolute;
-    top: 40%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -137,6 +137,7 @@ main {
 .boxed{
     border: 2px solid pink;
     justify-content: center; 
+}
 
 .questionpanel{
     color: white;
