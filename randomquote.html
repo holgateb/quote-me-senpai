@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Random Quote Generator</title>
 
     <link
       rel="stylesheet"
@@ -22,37 +23,43 @@
   </head>
 
   <body>
-    <nav  class="nav-extended">
+    <nav class="nav-extended">
       <div class="nav-wrapper">
-        <a href="#" class="brand-logo white-text">Quote Me, Senpai</a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <!-- Forced logo to stay to the left after resize -->
+        <a href="#" class="left brand-logo white-text">Quote Me, Senpai</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down white-text">
           <li><a href="./index.html" class="white-text">Home</a></li>
-          <li><a href="./randomquote.html" class="white-text">RandomQuote</a></li>
-          </ul>
-              
+          <li><a href="./randomquote.html" class="white-text">Random Quote Generator</a></li>
+          <li><a href="collapsible.html" class="white-text">JavaScript</a></li>
         </ul>
+        <!-- Dropdown Button that only appears on medium and smaller screens when the normal links disappear -->
+        <a
+          class="dropdown-trigger hide-on-large-only right"
+          href="#"
+          data-target="menuDropdown"
+          ><i class="medium material-icons white-text btn">dehaze</i></a
+        >
+        <!-- Dropdown Contents -->
+        <ul id="menuDropdown" class="dropdown-content">
+          <li><a href="./index.html" class="white-text">Home</a></li>
+          <li><a href="./randomquote.html" class="white-text">Random Quote Generator</a></li>
+          <li><a href="collapsible.html" class="white-text">JavaScript</a></li>
+        </ul>             
       </div>
     </nav>
 
-    <main>
-
+    <main class="z-depth-3">
       <h1 class="center-align" id="questionpanel"></h1>
-          <div class="col s3">
-          </div>
-          <div class="col s6" id="quote">
-          </div>
-          <div class="buttons col s6" id="answers">
+          <!-- <div class="col s3"></div>
+          <div class="col s6" id="quote"></div>
+          <div class="buttons col s6" id="answers"> -->
             <!-- Left emtpy to be filled dynamically by answers -->
             <!-- <button class="btn" id="btn-1">answer1</button>
             <button class="btn" id="btn-2">answer2</button>
             <button class="btn" id="btn-3">answer3</button>
             <button class="btn" id="btn-4">answer4</button> -->
-              <div  id="anime"></div>
-              <div id ="character"></div> 
-
-          </div>
-
-          
+      <p id="anime"></p>
+      <p id ="character"></p> 
     </main>
 
     <!-- <footer class="page-footer teal lighten-4">

@@ -20,29 +20,32 @@ body {
 
 h1 {
     color: white;
-    font-weight: 50px;
-}
-
-#anime {
-
-    color: white;
-    text-align: center;
-    font-weight: 50px;
-
-}
-
-#character {
-
-    color: white;
-    text-align: center;
-    font-weight: 50px;
+    font-weight: 700;
+    text-shadow: 5px 2px 5px black;
 }
 
 p {
     font-size: larger;
-    font-weight: 600;
-    text-shadow: 2px 2px 5px black;
+    font-weight: 700;
+    text-shadow: 2px 2px 5px white;
+    text-align: center;
+    color: black;
 }
+
+/*#anime {
+    color: white;
+    text-align: center;
+    font-weight: 500;
+    text-shadow: 5px 2px 5px black;
+
+}
+
+#character {
+    color: white;
+    text-align: center;
+    font-weight: 500;
+    text-shadow: 5px 2px 5px black;
+}*/
 
 .brand-logo {
     margin-left: 10px;
@@ -50,16 +53,10 @@ p {
     color: white;
 }
 
-#nav-mobile{
-
+/* #nav-mobile{
     color: white;
-    font-weight: 700;
     margin-right:30px ;
-}
-
-#winStreak, #bestWinStreak {
-    font-weight: bold;
-}
+} */
 
 /* Sets dropdown menu to always have set width */
 #menuDropdown {
@@ -68,19 +65,17 @@ p {
 
 main {
     flex: 1 0 auto;
-  }
-
-.start {
     justify-content: center;
     align-content: center;
     padding-bottom: 20px;
     padding-left: 20px;
     padding-right: 20px;
     position: absolute;
-    top: 40%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-  }
+    width: 80%;
+}
 
 .btn {
     background-color: #15389E;
@@ -90,69 +85,4 @@ main {
 
 .btn:hover {
     background-color: #91A9F0;
-}
-
-#quote {
-    font-weight: 700;
-    text-shadow: 2px 2px 6px black;
-    color: white;
-}
-
-.gif {
-    justify-content: center;
-    background-image: "";
-}
-
-/*.buttons {
-    display: grid;
-    gap: 10px;
-} */
-
-#answers {
-    display: grid;
-    gap: 10px;
-}
-
-footer {
-    display: flex;
-    flex-direction: column;
-   
-}
-
-/* MODAL CSS STYLING */
-#modal1 {
-    text-align: center;
-}
-
-#resultGif {
-    border: 5px solid #616161;
-    max-width: 90%;
-}
-
-#giveUpBtn {
-    background-color: #bdbdbd;
-    margin-right: 5px;
-    margin-bottom: 10px;
-
-}
-
-#nextQuestionButton {
-    background-color: #26a69a;
-    margin-right: 10px;
-    margin-bottom: 10px;
-
-}
-
-#resultText {
-    font-size: 25px;
-    margin-bottom: 25px;
-}               
-
-.hide {
-    display: none;
-}
-.questionpanel{
-    
-    color: white;
-
 }
