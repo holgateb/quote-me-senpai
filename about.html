@@ -47,73 +47,36 @@
           <li><a href="./about.html" class="white-text">About</a></li>
         </ul>
       </div>
-      <!-- Extended navbar for displaying win streaks that only shows when game starts -->
-      <div class="nav-content hide" id="streakBar">
-        <div class="center white-text">
-          Current Win Streak: <span id="winStreak">0</span> || Best Win Streak:
-          <span id="bestWinStreak"></span>
-        </div>
-      </div>
     </nav>
-    <!-- Start Page-->
-    <div id="start" class="center-align start white-text">
-      <h1>Welcome to Quote Me, Senpai!</h1>
-      <p>
-        Put your anime knowledge to the test with this comprehensive quiz
-        containing hundreds of the most memorable quotes from your favorite
-        anime films.
-      </p>
-      <button id="startButton" class="btn pulse">Start Game</button>
-    </div>
-    <!-- Quiz Page-->
-    <main id="main">
-      <div class="container">
-        <div class="row">
-          <div class="col s2"></div>
-          <div class="col s8 hide" id="quote">
-            <!-- Left empty to be filled dynamically by quote -->
-          </div>
-          <div class="col s2"></div>
-        </div>
+
+       <!-- About Page-->
+     <div class="about white-text center-align">
+      <div class="boxed"> 
+      <h1>About us</h1>
+      <p>Quote Me, Senpai is a fun anime knowledge quiz and random anime quote generator created as Project 1 by the Group 1 students in UW BootCamp who are anime fans. It is a muti choice quiz game made by using AnimeChan API where the player has to choose one correct answer from four given options. If a correct answer is slected the player will see a positive animation quote pulled from Nekos Best API and will continue towards next round of quiz by collecting streaks, whereas if the wrong answer is selected they'll see a negative GIF amd quote. 
+     Along with the quiz we have also created a function of a random quote page which can be easily accessed by clicking Random Quote Generator.
+     <p>      
+      <h1> Contributors</h1>
+      <ul>
+        <li>Ben <a href="https://github.com/holgateb">Github</a></li>
+        <li>Abby <a href="https://github.com/AbbyDabbyDooDoesGitHub">Github</a></li>
+        <li>Robert <a href="https://github.com/rbishop85">Github</a></li>
+        <li>Mary <a href="https://github.com/marycv">Github</a></li>
+        <li>Priyanka <a href="https://github.com/prigh-a">Github</a></li>
+        <li>Alka <a href="https://github.com/alka485">Github</a></li>
+        </ul>
       </div>
-
-      <div class="row">
-        <div class="buttons col s12 l6 offset-l3 hide modal-trigger" href="#modal1" id="answers">
-          <!-- Left emtpy to be filled dynamically by answers -->
-          <button class="btn" id="btn-1">answer1</button>
-          <button class="btn" id="btn-2">answer2</button>
-          <button class="btn" id="btn-3">answer3</button>
-          <button class="btn" id="btn-4">answer4</button>
-        </div>
-      </div>
-    </main>
-
-
-    <!-- MODAL STUFF -->
-
-    <!-- Modal Structure -->
-    <div id="modal1" class="modal ">
-        <div class="modal-content">
-            <!-- <h4 id="successOrFailure">Wrong Answer!</h4> -->
-            <h4 id="resultText"> </h4>
-            <img id="resultGif" src=""/>
-        </div>
-        <div class="modal-footer">
-            <!-- <a id="giveUpBtn" href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Give Up</a> -->
-            <a id="nextQuestionButton" href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat modal_resetTrigger">CONTINUE</a>
-        </div>
     </div>
 
-    <script
+     <script
       src="https://code.jquery.com/jquery-3.2.1.js"
       integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
       crossorigin="anonymous"
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <script type="text/javascript" src="./assets/js/script.js"></script>
-    <script src="./assets/js/start.js"></script>
-    
-  </body>
+   </body>
 
 </html>
+
+
