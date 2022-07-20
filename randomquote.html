@@ -4,80 +4,73 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Random Quote Generator</title>
 
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
-    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+     <!-- Link for Google Font 'Rajdhani' -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./assets/css/random.css" />
   </head>
 
   <body>
-    <nav>
-      <div class="nav-wrapper teal lighten-4">
-        <a href="#" class="brand-logo black-text">Quote Me, Senpai</a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a href="./index.html" class="black-text">Home</a></li>
-              
+    <nav class="nav-extended">
+      <div class="nav-wrapper">
+        <!-- Forced logo to stay to the left after resize -->
+        <a href="#" class="left brand-logo white-text">Quote Me, Senpai</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down white-text">
+          <li><a href="./index.html" class="white-text">Home</a></li>
+          <li><a href="./randomquote.html" class="white-text">Random Quote Generator</a></li>
+          <li><a href="collapsible.html" class="white-text">JavaScript</a></li>
         </ul>
+        <!-- Dropdown Button that only appears on medium and smaller screens when the normal links disappear -->
+        <a
+          class="dropdown-trigger hide-on-large-only right"
+          href="#"
+          data-target="menuDropdown"
+          ><i class="medium material-icons white-text btn">dehaze</i></a
+        >
+        <!-- Dropdown Contents -->
+        <ul id="menuDropdown" class="dropdown-content">
+          <li><a href="./index.html" class="white-text">Home</a></li>
+          <li><a href="./randomquote.html" class="white-text">Random Quote Generator</a></li>
+          <li><a href="collapsible.html" class="white-text">JavaScript</a></li>
+        </ul>             
       </div>
     </nav>
 
-    <main>
-
-      <h2 class="center-align" id="questionpanel"></h2>
-          <div class="col s3">
-          </div>
-          <div class="col s6" id="quote">
-          </div>
-          <div class="buttons col s6" id="answers">
-            <!-- Left emtpy to be filled dynamically by answers -->
-            <!-- <button class="btn" id="btn-1">answer1</button>
-            <button class="btn" id="btn-2">answer2</button>
-            <button class="btn" id="btn-3">answer3</button>
-            <button class="btn" id="btn-4">answer4</button> -->
-              <div  id="anime"></div>
-              <div id ="character"></div> 
-
-          </div>
-
-          
-    </main>
-
-    <footer class="page-footer teal lighten-4">
-      <div class="container">
-        <div class="row">
-          <div class="col l6 s12">
-            <img
-              src="./assets/images/banner2.png"
-              alt="sweet banner"
-              class="responsive-img"
-            />
-          </div>
-          <div class="col l4 offset-l2 s12">
-            <h5 class="white-text">Links</h5>
-            <ul>
-              <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
-            </ul>
-          </div>
+    <main class="z-depth-3">
+      <div class="row center-align">
+        <button onclick="pullRandomQuotes()" id="newQuoteButton" class="btn">Generate New Random Quote</button>
+      </div>
+      <div id="quotesection">
+        <h1 class="center-align" id="questionpanel"></h1>
+        <p id="anime"></p>
+        <p id ="character"></p>
+      </div>
+      <div class="container section">
+        <div class="row center-align">
+          <button onclick="screenshot()" id="screenShotBtn" class="btn pulse">Screenshot Quote</button>
+          <a href="" id="blank"></a>
         </div>
       </div>
-      <div class="footer-copyright">
-        <div class="container center-align black-text">© 2022 Group 1 Life</div>
-      </div>
-    </footer>
+    </main>
 
     <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous">
     </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="./assets/js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 
-
-  <!-- <script type="text/javascript" src="/assets/js/script.js"></script> -->
    <script src="./assets/js/randomquote generator.js"></script>
   </body>
 

@@ -1,0 +1,72 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-image: url("../images/background_img.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.nav-extended {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.dropdown-content {
+    background-color: #15389E;
+    color: white;
+}
+
+h1 {
+    color: white;
+    font-weight: 700;
+    text-shadow: 5px 2px 5px black;
+}
+
+p {
+    font-size: larger;
+    font-weight: 700;
+    text-shadow: 2px 2px 5px white;
+    text-align: center;
+    color: black;
+}
+
+.btn {
+    background-color: #15389E;
+    color: white;
+    transition: background-color 1s ease-out 100ms;
+}
+
+/* Sets dropdown menu to always have set width */
+#menuDropdown {
+    width: 110px !important;
+}
+
+#newQuoteButton {
+    margin-top: 40px;
+}
+
+main {
+    flex: 1 0 auto;
+    justify-content: center;
+    align-content: center;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+}
+
+.btn {
+    background-color: #15389E;
+    color: white;
+    transition: background-color 1s ease-out 100ms;
+}
+
+.btn:hover {
+    background-color: #91A9F0;
+}
