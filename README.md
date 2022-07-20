@@ -18,6 +18,14 @@ Have Features that Utilize Local Storage
 -Google Fonts
 -JSON
 
+## Team Members
+Ben Holgate
+Robert Bishop
+Mary Villoso
+Alka Sah
+Priyanka Ghale
+Abby Douglas
+
 ## Installation
 
 1. Clone this repository to your computer's desktop.
