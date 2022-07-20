@@ -12,7 +12,6 @@ function startGame() {
     answersEl.classList.remove("hide");
     quoteEl.classList.remove("hide");
     streakBarEl.classList.remove("hide");
-    screenShotBtn.classList.remove("hide");
 
     // pullRandomQuotes();
 };

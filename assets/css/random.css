@@ -32,35 +32,19 @@ p {
     color: black;
 }
 
-/*#anime {
+.btn {
+    background-color: #15389E;
     color: white;
-    text-align: center;
-    font-weight: 500;
-    text-shadow: 5px 2px 5px black;
-
+    transition: background-color 1s ease-out 100ms;
 }
-
-#character {
-    color: white;
-    text-align: center;
-    font-weight: 500;
-    text-shadow: 5px 2px 5px black;
-}*/
-
-.brand-logo {
-    margin-left: 10px;
-    font-weight: 700;
-    color: white;
-}
-
-/* #nav-mobile{
-    color: white;
-    margin-right:30px ;
-} */
 
 /* Sets dropdown menu to always have set width */
 #menuDropdown {
     width: 110px !important;
+}
+
+#newQuoteButton {
+    margin-top: 40px;
 }
 
 main {
