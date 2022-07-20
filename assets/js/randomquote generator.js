@@ -36,4 +36,12 @@ function processQuizItems(data) {
         //console.log(data.quote);    
     }
 
-}                
+}  
+
+function screenshot() {
+    html2canvas(document.querySelector("#quotesection")).then(canvas => {
+    $('#blank').attr('href', canvas.toDataURL("image/jpg"));
+    $('#blank').attr("download", "quote.jpg");
+    $('#blank')[0].click();
+    });
+};
