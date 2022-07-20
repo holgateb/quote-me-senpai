@@ -38,17 +38,15 @@ Abby Douglas
 
 ## Link to Web App:  https://holgateb.github.io/quote-me-senpai/
 
-
-# API - get quotes by anime title
-
+## API - get quotes by anime title
 fetch('https://animechan.vercel.app/api/quotes/anime?title=naruto')
      .then(response => response.json())
      .then(quotes => console.log(quotes))
 
-# API - get quotes by character name
+## API - get quotes by character name
 fetch('https://animechan.vercel.app/api/quotes/character?name=saitama')
      .then(response => response.json())
      .then(quotes => console.log(quotes))
 
-# API - get anime images and gifs
+## API - get anime images and gifs
 https://nekos.best/api/v2/thumbsup?amount=20https://nekos.best/api/v2/thumbsup
