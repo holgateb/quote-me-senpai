@@ -43,6 +43,10 @@ p {
     width: 110px !important;
 }
 
+#newQuoteButton {
+    margin-top: 40px;
+}
+
 main {
     flex: 1 0 auto;
     justify-content: center;
