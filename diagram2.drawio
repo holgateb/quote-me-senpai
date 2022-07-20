@@ -1,42 +1,4 @@
 <mxfile host="65bd71144e">
-    <diagram id="VXaFxo0FiwJ81_RNlHbv" name="Title Page">
-        <mxGraphModel dx="717" dy="498" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
-            <root>
-                <mxCell id="0"/>
-                <mxCell id="1" parent="0"/>
-                <mxCell id="18" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;" parent="1" vertex="1">
-                    <mxGeometry width="850" height="70" as="geometry"/>
-                </mxCell>
-                <mxCell id="9" value="Quote Me, Senpai" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="10" y="15" width="120" height="45" as="geometry"/>
-                </mxCell>
-                <mxCell id="10" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="160" y="150" width="480" height="210" as="geometry"/>
-                </mxCell>
-                <mxCell id="12" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="550" y="22.5" width="290" height="30" as="geometry"/>
-                </mxCell>
-                <mxCell id="13" value="Random Quote Generator" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="620" y="27.5" width="150" height="20" as="geometry"/>
-                </mxCell>
-                <mxCell id="15" value="Home" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="560" y="27.5" width="50" height="20" as="geometry"/>
-                </mxCell>
-                <mxCell id="16" value="&lt;font style=&quot;font-size: 12px&quot;&gt;Start Game&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=7;" parent="1" vertex="1">
-                    <mxGeometry x="365" y="310" width="70" height="30" as="geometry"/>
-                </mxCell>
-                <mxCell id="17" value="Welcome to Quote Me, Senpai!" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;" parent="1" vertex="1">
-                    <mxGeometry x="325" y="170" width="150" height="60" as="geometry"/>
-                </mxCell>
-                <mxCell id="19" value="Put your anime knowledge to the test with this comprehensive quiz containing hundreds of the most memorable quotes from your favorite anime films." style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="185" y="240" width="430" height="60" as="geometry"/>
-                </mxCell>
-                <mxCell id="21" value="About" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="780" y="27.5" width="50" height="20" as="geometry"/>
-                </mxCell>
-            </root>
-        </mxGraphModel>
-    </diagram>
     <diagram id="PHAZTwvSJs3tpsg8RhT4" name="Quiz">
         <mxGraphModel dx="717" dy="498" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
@@ -58,7 +20,7 @@
                     <mxGeometry x="10" y="10" width="120" height="45" as="geometry"/>
                 </mxCell>
                 <mxCell id="qAMOZQ2YStMqOkCcbtmP-0" value="Current Win Streak: 0 || Best Win Streak: 1" style="rounded=0;whiteSpace=wrap;html=1;" parent="rj7ZBL9GnCpkZjyiGFAT-1" vertex="1">
-                    <mxGeometry x="280" y="60" width="250" height="20" as="geometry"/>
+                    <mxGeometry x="280" y="56" width="250" height="20" as="geometry"/>
                 </mxCell>
                 <mxCell id="UZNMUrl0mO9TLFQOylir-0" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="rj7ZBL9GnCpkZjyiGFAT-1" vertex="1">
                     <mxGeometry x="185" y="190" width="480" height="240" as="geometry"/>
