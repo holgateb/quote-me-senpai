@@ -70,3 +70,11 @@ main {
 .btn:hover {
     background-color: #91A9F0;
 }
+
+@media screen and (max-width: 992px) {
+    #questionpanel {
+        font-size: 25px;
+    }
+
+}
+
