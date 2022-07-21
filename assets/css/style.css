@@ -150,3 +150,28 @@ main {
     }
 
 }
+
+@media screen and (max-width: 420px) {
+    h2 {
+        font-size: 200%;
+    }
+    
+    .aboutUs_h1 {
+        font-size: 25px;
+        padding-top: 0%;
+        padding-bottom:0;
+        margin-top: 5px;
+        margin-bottom: 0;
+
+
+    }
+
+    .aboutUs_p {
+        font-size: 14px;
+        padding-top: 0%;
+        padding-bottom:0;
+        margin-top: 0%;
+        margin-bottom: 0;
+    }
+
+}
