@@ -51,12 +51,12 @@ p {
     color: white;
 }
 
-/* #nav-mobile{
+#nav-mobile{
 
     color: white;
     font-weight: 700;
     margin-right:30px ;
-} */
+}
 
 #winStreak, #bestWinStreak {
     font-weight: bold;
