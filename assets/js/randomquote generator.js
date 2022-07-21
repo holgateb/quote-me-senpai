@@ -45,3 +45,4 @@ function screenshot() {
     $('#blank')[0].click();
     });
 };
+
